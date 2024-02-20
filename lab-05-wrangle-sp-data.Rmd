@@ -2,12 +2,12 @@
 title: "Lab 05 - La Quinta is Spanish for next to Denny's, Pt. 2"
 subtitle: "Wrangling spatial data"
 output: 
-author: "Evan Kurtz"
   tufte::tufte_html:
     tufte_variant: "envisioned"
     highlight: pygments
     css: ../lab.css
 link-citations: true
+author: "Evan Kurtz"
 ---
 
 ```{r fig.margin = TRUE, echo = FALSE}
@@ -70,6 +70,8 @@ dn_ak <- dennys %>%
 nrow(dn_ak)
 ```
 
+***There are 3 Denny's located in Alaska.***
+
 2.  Filter the La Quinta dataframe for Alaska (AK) and save the result as `lq_ak`. How many La Quinta locations are there in Alaska?
 
 ```{r}
@@ -77,6 +79,8 @@ lq_ak <- laquinta %>%
   filter(state == "AK")
 nrow(lq_ak)
 ```
+
+***There are 2 Laquinta's in Alaska.***
 
 Next we'll calculate the distance between all Denny's and all La Quinta locations in Alaska.
 Let's take this step by step:
